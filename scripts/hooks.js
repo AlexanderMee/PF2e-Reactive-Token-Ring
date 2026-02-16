@@ -11,6 +11,7 @@ import {
 } from "./systemCompatibility.js";
 
 export async function preUpdateActor(actor, update, status, _userID) {
+  console.log("Healing info:", { isHeal, dmg, maxHP });
   if (!status.diff) return;
   const { isHeal, dmg, maxHP } = getHealingInfo(actor, update, status);
   if (isHeal !== undefined) {
