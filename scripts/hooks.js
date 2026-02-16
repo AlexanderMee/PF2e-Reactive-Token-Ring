@@ -11,9 +11,11 @@ import {
 } from "./systemCompatibility.js";
 
 export async function preUpdateActor(actor, update, status, _userID) {
-  console.log("Healing info:", { isHeal, dmg, maxHP });
   if (!status.diff) return;
   const { isHeal, dmg, maxHP } = getHealingInfo(actor, update, status);
+
+  console.log("Healing info:", { isHeal, dmg, maxHP });
+  
   if (isHeal !== undefined) {
     const healthLevel = getHealthLevel(actor, update);
     // Put process into async subfunction so we can run it in parallel on multiple tokens
