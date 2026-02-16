@@ -155,8 +155,8 @@ function getSystemKeys(actor) {
       };
     case "impmal":
       return {
-        hpPath: "system.status.wounds.value",
-        hpMaxPath: "system.status.wounds.max",
+        hpPath: "system.combat.wounds.value",
+        hpMaxPath: "system.combat.wounds.max",
         zeroIsBad: false,
       };
     case "hexxen-1733":
