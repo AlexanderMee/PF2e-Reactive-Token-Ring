@@ -1,3 +1,5 @@
+console.log("RTR hooks.js loaded", Date.now());
+
 import { CONDITIONS, MODULE_ID } from "./misc.js";
 import {
   flashColor,
